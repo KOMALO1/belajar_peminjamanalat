@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Peminjams\Schemas;
 
+
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
 
@@ -11,9 +12,9 @@ class PeminjamInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('user_id')
-                    ->numeric(),
-                TextEntry::make('nama'),
+                TextEntry::make('user.name'),
+
+
                 TextEntry::make('created_at')
                     ->dateTime()
                     ->placeholder('-'),

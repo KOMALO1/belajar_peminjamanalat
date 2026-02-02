@@ -13,10 +13,7 @@ return new class extends Migration
     {
         Schema::create('peminjams', function (Blueprint $table) {
             $table->id();
-            $table->foreignid("user_id")->constrained()->cascadeOnDelete();
-            $table->string("nama");
-            $table->string("password");
-            
+            $table->foreignid("user_id")->constrained()->cascadeOnDelete();            
             
             $table->timestamps();
         });

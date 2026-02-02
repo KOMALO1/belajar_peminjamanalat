@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Peminjams\Schemas;
 
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -11,13 +12,9 @@ class PeminjamForm
     {
         return $schema
             ->components([
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric(),
-                TextInput::make('nama')
-                    ->required(),
-                TextInput::make('password')
-                    ->password()
+                Select::make('user_id')
+                    ->label('nama user')
+                    ->relationship('user', 'name')
                     ->required(),
             ]);
     }
